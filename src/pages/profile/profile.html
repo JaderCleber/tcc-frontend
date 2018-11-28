@@ -1,0 +1,105 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      TCC PUC-Minas
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary" stacked>Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>CEP</ion-label>
+      <ion-input type="text" [(ngModel)]="cep"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Endereço</ion-label>
+      <ion-input type="text" [(ngModel)]="address"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Nº</ion-label>
+      <ion-input type="text" [(ngModel)]="number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Estado</ion-label>
+      <ion-input type="text" [(ngModel)]="state"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Município</ion-label>
+      <ion-input type="text" [(ngModel)]="city"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Telefone</ion-label>
+      <ion-input type="text" [(ngModel)]="phone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>CPF</ion-label>
+      <ion-input type="number" [(ngModel)]="cpf"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Email</ion-label>
+      <ion-input type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button color="primary" (click)="handleOpenChangePassword()">Trocar Senha</button>
+      <button ion-button color="danger" (click)="handleDeleteAccount()">Deletar Conta</button>
+      <div class="d-flex justify-content-center my-1">
+        <button ion-button color="primary" (click)="handleSave()">Salvar</button>
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngIf="changePassword">
+    <ion-item>
+      <ion-label color="primary" stacked>Atual</ion-label>
+      <ion-input type="password" [(ngModel)]="passwordCurrent"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Nova Senha</ion-label>
+      <ion-input type="password" [(ngModel)]="passwordNew"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Confirmar Senha</ion-label>
+      <ion-input type="password" [(ngModel)]="passwordConfirm"></ion-input>
+    </ion-item>
+
+    <ion-item class="d-flex justify-content-center my-1">
+      <button ion-button color="primary" (click)="handleChangePassword()">Trocar Senha</button>
+    </ion-item>
+  </ion-list>
+
+  <!-- <div class="modal" tabindex="-1" role="dialog" [(ngModel)]="myModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</ion-content>
